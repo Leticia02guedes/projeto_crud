@@ -1,9 +1,12 @@
 function Formulario({botao}){
     return(
         <form>
-            <h1>Formulario</h1>
+
+            <h2>Sistema Gestor de Produtos</h2>
+
             <input className="form-control" type="text" placeholder="Nome"></input>
             <input className="form-control" type="text" placeholder="Marca"></input>
+
             {
                botao
                 ?
@@ -15,6 +18,7 @@ function Formulario({botao}){
                     <input className="btn btn-danger"  type="button" value="Remover" />
                 </div>
             }
+            
         </form>
     )
 }
