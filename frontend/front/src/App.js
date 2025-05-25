@@ -11,7 +11,7 @@ function App() {
     marca : ''
   }
 
-  const [btnCadastrar] = useState(true);
+  const [btnCadastrar, setBtnCadastrar] = useState(true);
   const [produtos, setProdutos] = useState([]);
   const [objProduto, setObjProduto] = useState(produto);
 
@@ -57,12 +57,18 @@ function App() {
     setObjProduto(produto);
   }
 
+   //Selecionar produto
+  const selecionarProduto = (indice) => {
+    setObjProduto(produtos[indice]);
+    setBtnCadastrar(false);
+  }
+
 
 return (    
       <div>        
         <p>{JSON.stringify(objProduto)}</p>
         <Formulario botao={btnCadastrar} eventoTeclado={aoDigitar} cadastrar={cadastrar} obj={objProduto}/>  
-        <Tabela vetor={produtos}/>
+        <Tabela vetor={produtos} selecionar={selecionarProduto}/>
       </div>
   )
 }
