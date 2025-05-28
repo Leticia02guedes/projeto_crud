@@ -10,12 +10,20 @@ function Formulario({botao, eventoTeclado, cadastrar, obj, cancelar, remover, al
             {
                botao
                 ?
-                <input className="btn btn-success" type="button" value="Cadastrar" onClick={cadastrar}/>
+                <button className="btn btn-success" type="button" onClick={cadastrar}>
+                    <i class="bi bi-plus"></i> Cadastrar
+                </button>
                 :
                 <div>
-                    <input className="btn btn-warning" type="button" onClick={cancelar} value="Cancelar" />
-                    <input className="btn btn-primary" type="button" onClick={alterar} value="Alterar" />
-                    <input className="btn btn-danger"  type="button" onClick={remover} value="Remover" />
+                    <button className="btn btn-warning" type="button" onClick={cancelar} value="Cancelar" >
+                        <i class="bi bi-x-circle-fill"></i> Cancelar
+                    </button>
+                    <button className="btn btn-primary" type="button" onClick={alterar} value="Alterar" >
+                        <i class="bi bi-pen-fill"></i> Alterar
+                    </button>
+                    <button className="btn btn-danger"  type="button" onClick={remover} value="Remover" >
+                        <i class="bi bi-trash2-fill"></i> Remover
+                    </button>
                 </div>
             }
             

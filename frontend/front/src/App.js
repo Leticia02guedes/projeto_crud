@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Formulario from './Formulario';
 import Tabela from './Tabela';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 function App() {
   

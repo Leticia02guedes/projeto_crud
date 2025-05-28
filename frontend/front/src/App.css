@@ -61,3 +61,8 @@ form input[type="text"] {
 .btn-success:hover {
   background-color: #155724;
 }
+
+.btn-select{
+  background: none;
+}
+
